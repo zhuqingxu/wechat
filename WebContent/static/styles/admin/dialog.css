@@ -1,0 +1,86 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+#mytable { 
+	padding: 0;
+	margin: 0;
+} 
+
+td.tleft {
+    font: 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #4f6b72;
+	border-left: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: right;
+	padding: 6px 6px 6px 6px;
+	background-color: #f1f1f1
+}
+
+td.tright {
+    font: 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #4f6b72;
+	border-left: 1px solid #C1DAD7;
+	border-right: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 6px 6px 6px 6px;
+	background-color: #ffffff
+}
+
+td.left {
+    font: 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #4f6b72;
+	border-left: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: right;
+	padding: 6px 6px 6px 6px;
+	background-color: #f1f1f1
+}
+
+td.right {
+    font: 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #4f6b72;
+	border-left: 1px solid #C1DAD7;
+	border-right: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 6px 6px 6px 6px;
+	background-color: #ffffff
+}
+
+td.bleft {
+    font: 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #4f6b72;
+	border-left: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: right;
+	padding: 6px 6px 6px 6px;
+	background-color: #f1f1f1
+}
+
+td.bright {
+    font: 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #4f6b72;
+	border-left: 1px solid #C1DAD7;
+	border-right: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 6px 6px 6px 6px;
+	background-color: #ffffff
+}

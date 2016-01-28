@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/layouts/">
+	<excludes>
+		<pattern>/static/*</pattern>
+		<pattern>/cxf/*</pattern>
+		<pattern>/api/*</pattern>
+		<pattern>/javasimon/*</pattern>
+		<pattern>/admin*</pattern>
+		<pattern>/login*</pattern>
+		<pattern>/map*</pattern>
+		<pattern>/weixin*</pattern>
+		<pattern>/chat</pattern>
+	</excludes>
+	
+	<decorator name="index" page="layout-index.jsp">
+		<pattern>/index</pattern>
+	</decorator>
+	
+	<decorator name="fxsp" page="layout-fxsp.jsp">
+		<pattern>/fxsp*</pattern>
+	</decorator>
+	<decorator name="ertong" page="layout-fxsp.jsp">
+		<pattern>/ertong</pattern>
+	</decorator>
+	<decorator name="liangyou" page="layout-fxsp.jsp">
+		<pattern>/liangyou</pattern>
+	</decorator>
+	<decorator name="shengxian" page="layout-fxsp.jsp">
+		<pattern>/shengxian</pattern>
+	</decorator>
+	<decorator name="tiaowei" page="layout-fxsp.jsp">
+		<pattern>/tiaowei</pattern>
+	</decorator>
+	<decorator name="jiushui" page="layout-fxsp.jsp">
+		<pattern>/jiushui</pattern>
+	</decorator>
+	<decorator name="lingshi" page="layout-fxsp.jsp">
+		<pattern>/lingshi</pattern>
+	</decorator>
+	<decorator name="chongtiao" page="layout-fxsp.jsp">
+		<pattern>/chongtiao</pattern>
+	</decorator>
+	
+	<decorator name="default" page="layout-default.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+	
+</decorators>

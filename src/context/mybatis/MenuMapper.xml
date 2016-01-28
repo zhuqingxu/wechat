@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.fangxin365.wechat.repository.mybatis.MenuMybatisDao">
+	<!--
+		获取菜单: 输出直接映射到对象, parent_id列要"as parentId"以方便映射
+	-->
+	<select id="get" parameterType="long" resultType="Menu">
+		select id, parent_id as parentId, title, forward, target, isleaf
+		from ss_menu
+		where id=#{id}
+	</select>
+
+	<!-- 查询菜单,演示: 1.输入用map传入多个参数 2.<where>语句, 智能添加where和and关键字 3.输出直接映射对象 -->
+	<select id="search" parameterType="map" resultType="Menu">
+		select id, parent_id as parentId, title, forward, target, isleaf
+		from ss_menu
+		<where>
+			<if test="loginName != null">
+				login_name=#{loginName}
+			</if>
+			<if test="name != null">
+				and name=#{name}
+			</if>
+		</where>
+	</select>
+</mapper>
