@@ -9,6 +9,8 @@ public class BaseController {
 	
 	protected static final String PAGE_SIZE_FIFTEEN = "15";
 	
+	protected static final String PAGE_SIZE_TWENTY = "15";
+	
 	protected Log logger = LogFactory.getLog(getClass());
 
 }

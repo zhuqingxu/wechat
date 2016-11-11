@@ -1,0 +1,55 @@
+package com.fangxin365.wechat.entity.result;
+
+import java.io.Serializable;
+
+import com.fangxin365.core.utils.json.WxGsonBuilder;
+
+/**
+ * 微信错误码说明
+ * 
+ * http://mp.weixin.qq.com/wiki/index.php?title=全局返回码说明
+ */
+@SuppressWarnings("serial")
+public class WxError implements Serializable {
+
+	private int errorCode;
+
+	private String errorMsg;
+
+	private String json;
+
+	public int getErrorCode() {
+		return errorCode;
+	}
+
+	public void setErrorCode(int errorCode) {
+		this.errorCode = errorCode;
+	}
+
+	public String getErrorMsg() {
+		return errorMsg;
+	}
+
+	public void setErrorMsg(String errorMsg) {
+		this.errorMsg = errorMsg;
+	}
+
+	public String getJson() {
+		return json;
+	}
+
+	public void setJson(String json) {
+		this.json = json;
+	}
+
+	public static WxError fromJson(String json) {
+		WxError error = WxGsonBuilder.create().fromJson(json, WxError.class);
+		return error;
+	}
+
+	@Override
+	public String toString() {
+		return "微信错误: errcode=" + errorCode + ", errmsg=" + errorMsg + "\njson:" + json;
+	}
+
+}

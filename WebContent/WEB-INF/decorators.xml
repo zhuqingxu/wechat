@@ -9,6 +9,7 @@
 		<pattern>/login*</pattern>
 		<pattern>/map*</pattern>
 		<pattern>/weixin*</pattern>
+		<pattern>/wechat*</pattern>
 		<pattern>/chat</pattern>
 	</excludes>
 	

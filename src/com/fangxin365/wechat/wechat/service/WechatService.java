@@ -31,25 +31,29 @@ public class WechatService extends BaseService {
 			String toUserName = requestMap.get("ToUserName");
 			// 消息类型
 			String msgType = requestMap.get("MsgType");
+			
+			logger.info("fromUserName=" + fromUserName);
+			logger.info("toUserName=" + toUserName);
+			logger.info("msgType=" + msgType);
 
-			TextMessage textMessage = new TextMessage();
-			textMessage.setToUserName(fromUserName);
-			textMessage.setFromUserName(toUserName);
-			textMessage.setCreateTime(new Date().getTime());
-			textMessage.setMsgType(WechatConstants.RESP_MESSAGE_TYPE_TEXT);
-			textMessage.setFuncFlag(0);
 			// 文本消息
 			if (msgType.equals(WechatConstants.REQ_MESSAGE_TYPE_TEXT)) {
 				// 接收用户发送的文本消息内容
 				String content = requestMap.get("Content");
+				
+				logger.info("content=" + content);
+				TextMessage textMessage = new TextMessage();
+				textMessage.setToUserName(fromUserName);
+				textMessage.setFromUserName(toUserName);
+				textMessage.setCreateTime(new Date().getTime());
+				textMessage.setMsgType(WechatConstants.RESP_MESSAGE_TYPE_TEXT);
+				textMessage.setFuncFlag(0);
 
 				if ("1".equals(content)) {
 					textMessage.setContent("1是很好的");
-					// 将文本消息对象转换成xml字符串
 					respMessage = MessageUtil.textMessageToXml(textMessage);
 				} else if ("2".equals(content)) {
 					textMessage.setContent("我不是2货");
-					// 将文本消息对象转换成xml字符串
 					respMessage = MessageUtil.textMessageToXml(textMessage);
 				}
 			}

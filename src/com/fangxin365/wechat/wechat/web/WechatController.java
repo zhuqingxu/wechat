@@ -88,7 +88,6 @@ public class WechatController extends BaseController {
 				e.printStackTrace();
 			}
 		}
-		System.out.println("失败 ");
 		logger.info("认证失败");
 		return null;
 	}
